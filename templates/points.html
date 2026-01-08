@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Усі оцінки</title>
+</head>
+<body>
+    <h2>Усі оцінки студентів</h2>
+
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Студент</th>
+            <th>Дисципліна</th>
+            <th>Семестр</th>
+            <th>Оцінка</th>
+        </tr>
+        {% for p in points %}
+        <tr>
+            <td>{{ p.student }}</td>
+            <td>{{ p.course }}</td>
+            <td>{{ p.semester }}</td>
+            <td>{{ p.value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">← На головну</a>
+</body>
+</html>

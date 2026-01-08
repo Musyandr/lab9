@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Дисципліни</title>
+</head>
+<body>
+    <h2>Список дисциплін</h2>
+
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Назва дисципліни</th>
+            <th>Семестр</th>
+        </tr>
+        {% for c in courses %}
+        <tr>
+            <td>{{ c.title }}</td>
+            <td>{{ c.semester }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">← На головну</a>
+</body>
+</html>

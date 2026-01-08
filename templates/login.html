@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Вхід у систему</title>
+</head>
+<body>
+    <h2>Авторизація</h2>
+    
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="post">
+        <label>Логін:</label><br>
+        <input type="text" name="username" required><br><br>
+        
+        <label>Пароль:</label><br>
+        <input type="password" name="password" required><br><br>
+        
+        <button type="submit">Увійти</button>
+    </form>
+    <br>
+    <a href="/">← На головну</a>
+</body>
+</html>

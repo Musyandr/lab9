@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Студенти</title>
+</head>
+<body>
+    <h2>Список студентів</h2>
+
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>ID</th>
+            <th>ПІБ студента</th>
+            <th>Дії</th>
+        </tr>
+        {% for s in students %}
+        <tr>
+            <td>{{ s.id }}</td>
+            <td>{{ s.name }}</td>
+            <td><a href="/student/{{ s.id }}">Переглянути оцінки</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">← На головну</a>
+</body>
+</html>
